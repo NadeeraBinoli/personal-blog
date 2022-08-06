@@ -39,7 +39,7 @@ nav {
   list-style: none;
 }
 
-.nav-link-ul a {
+a {
   text-decoration: none;
 }
 
@@ -73,7 +73,8 @@ form {
   width: 11rem;
   height: 2rem;
 }
-/* blog posts- main section - mobile size */
+
+/* index.html blog posts- main section - mobile size */
 .card {
   margin: 5rem 2rem;
 }
@@ -133,3 +134,33 @@ h2, .p2 {
   line-height: 2rem;
 }
 
+/* detail-post.html blog posts- detail section - mobile size*/
+#detail h2 {
+  margin: 0 3rem;
+  text-align: center;
+}
+
+#detail .type-date {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+#detail .profile-div {
+  justify-content: center;
+}
+
+#detail .card:after {
+  display: none;
+}
+
+#detail .p2 {
+  margin: 2rem 0;
+}
+
+/* detail-post.html blog posts- detail section - desktop size*/
+@media screen and (min-width:820px) {
+  #detail .p2 {
+    margin: 2rem 5rem;
+  }
+}
