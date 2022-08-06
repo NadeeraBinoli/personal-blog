@@ -91,6 +91,10 @@ form {
   margin: 1rem 0;
 }
 
+.last:after{
+  display: none;
+}
+
 .card-img {
   width: 100%;
   height: 100%;
@@ -163,4 +167,11 @@ h2, .p2 {
   #detail .p2 {
     margin: 2rem 5rem;
   }
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 0 0 5rem 0;
 }
