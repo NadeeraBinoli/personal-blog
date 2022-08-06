@@ -78,7 +78,7 @@ form {
   height: 2rem;
 }
 
-/* navigation bar - desktop size*/
+/* navigation bar - mobile size*/
 .hamberger-menue {
   background: url("image/hamberger-menu.svg");
   display: none;
@@ -127,14 +127,37 @@ form {
 }
 
 @media screen and (max-width:500px) {
+
+  /* menue-search  button */
   form {
-    display: none;
+    position: absolute;
+    top: 90px;
+    right: 25px;
+    transform: translateY(-1000%);
+    transition: transform 350ms ease-in;
+  }
+
+  form:before {
+    position: absolute;
+    content: "";
+    top: -20px;
+    right: 1rem;
+    width: 0;
+    height: 0;
+    z-index: 1;
+    border: 10px solid transparent;
+    border-bottom-color: #293341;
+  }
+
+  form[data-visibility="true"] {
+    transform: translateY(0%);
   }
 
   .menue-search {
     display: block;
   }
 
+  /* hamberger-menue button */
   .nav-link-ul {
     position: fixed;
     z-index: 1;
@@ -142,7 +165,7 @@ form {
     background-color: hsl(0 0% 52% /0.95);
     flex-direction: column;
     justify-content: flex-start;
-    padding: 5rem 0 0 6rem ;
+    padding: 5rem 0 0 6rem;
     transition: transform 350ms ease-out;
     transform: translateX(-100%);
   }
