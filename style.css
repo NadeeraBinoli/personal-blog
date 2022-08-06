@@ -115,14 +115,38 @@ form {
 }
 
 @media screen and (max-width:885px) {
+
+  /* hamberger-menue button */
   .hamberger-menue {
     display: block;
   }
-}
 
-@media screen and (max-width:885px) and (min-width:500px) {
-  .nav-item {
-    display: none;
+  .nav-link-ul {
+    position: fixed;
+    z-index: 1;
+    inset: 0 40% 0 0;
+    background-color: hsl(0 0% 52% /0.95);
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 5rem 0 0 6rem;
+    transition: transform 350ms ease-out;
+    transform: translateX(-100%);
+  }
+
+  .nav-link-ul[data-visible="true"] {
+    transform: translateX(-0%);
+  }
+
+  nav li, nav a {
+    background-color: transparent;
+  }
+
+  .menue-close {
+    position: absolute;
+    display: block;
+    z-index: 99;
+    left: 2.0rem;
+    top: 2.3rem;
   }
 }
 
@@ -156,35 +180,6 @@ form {
   .menue-search {
     display: block;
   }
-
-  /* hamberger-menue button */
-  .nav-link-ul {
-    position: fixed;
-    z-index: 1;
-    inset: 0 40% 0 0;
-    background-color: hsl(0 0% 52% /0.95);
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 5rem 0 0 6rem;
-    transition: transform 350ms ease-out;
-    transform: translateX(-100%);
-  }
-
-  .nav-link-ul[data-visible="true"] {
-    transform: translateX(-0%);
-  }
-
-  nav li, nav a {
-    background-color: transparent;
-  }
-
-  .menue-close {
-    position: absolute;
-    display: block;
-    z-index: 99;
-    left: 2.0rem;
-    top: 2.3rem;
-  }
 }
 
 /* index.html blog posts- main section - mobile size */
@@ -196,10 +191,10 @@ form {
   content: "";
   position: absolute;
   width: 80%;
-  height: 3px;
+  height: 2px;
   left: 10%;
   right: 10%;
-  background: white;
+  background: #51555a;
   border-radius: 1rem;
   margin: 2rem 0;
 }
@@ -235,6 +230,7 @@ form {
 .p1, .p3 {
   display: inline-block;
   margin: 1rem;
+  color: #bac3ce;
 }
 
 .p1:after {
@@ -242,13 +238,21 @@ form {
   position: absolute;
   width: 6px;
   height: 6px;
-  background: white;
+  background: #bac3ce;
   border-radius: 50%;
   margin: 0.3rem 1rem 0;
 }
 
 h2, .p2 {
   line-height: 2rem;
+}
+
+#home .p2 {
+  color: #bac3ce;
+}
+
+.occupation {
+  color: #bac3ce;
 }
 
 /* index.html blog posts- main section - desktop size */
@@ -282,6 +286,7 @@ h2, .p2 {
 #detail h2 {
   margin: 0 3rem;
   text-align: center;
+  font-size: 2rem;
 }
 
 #detail .type-date {
@@ -293,6 +298,10 @@ h2, .p2 {
 #detail .profile-div {
   justify-content: center;
   margin-bottom: 2rem;
+}
+
+#detail .card {
+  margin: 1rem 2rem;
 }
 
 #detail .card:after {
