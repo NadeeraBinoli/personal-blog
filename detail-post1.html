@@ -19,15 +19,19 @@
   <nav>
 
     <!--navigation bar-->
+
+    <button type="button" class="hamberger-menue" aria-controls="nav-link-ul" aria-expanded="false"><span class="sr-only"></span></button>
+
     <a href="index.html">
       <div class="brand-div">
         <img src="image\favicon.png" class="brandIcon" alt="brand Icon">
         <h1 class="brand-name">Epictetus</h1>
       </div>
     </a>
-
+    
     <div class="nav-item">
-      <ul id="nav-link-ul" class="nav-link-ul">
+      <ul data-visible="false" id="nav-link-ul" class="nav-link-ul">
+        <button class="menue-close" type="button"></button>
         <li>
           <a class="nav-link" href="#UI Design">UI Design</a>
         </li>
@@ -46,6 +50,7 @@
       <button type="submit" class="search-icon"></button>
       <input class="search-bar" type="search" placeholder="Search" required>
     </form>
+    <button type="button" class="menue-search"></button>
   </nav>
 
   <!-- blog post -->

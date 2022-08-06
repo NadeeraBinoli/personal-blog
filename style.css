@@ -19,6 +19,7 @@ nav {
   grid-gap: 1rem;
   justify-content: center;
   margin: 0.5rem 0 0;
+  cursor: pointer;
 }
 
 .brandIcon {
@@ -49,6 +50,7 @@ a {
   width: 1rem;
   height: 1rem;
   border: none;
+  cursor: pointer;
 }
 
 /* search bar */
@@ -64,6 +66,7 @@ form {
   width: 1rem;
   height: 1rem;
   border: none;
+  cursor: pointer;
 }
 
 .search-bar {
@@ -73,6 +76,92 @@ form {
   padding: 5px 12px;
   width: 11rem;
   height: 2rem;
+}
+
+/* navigation bar - desktop size*/
+.hamberger-menue {
+  background: url("image/hamberger-menu.svg");
+  display: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.menue-close {
+  background: url("image/menue-close.svg");
+  display: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.menue-search {
+  background: url("image/search-solid.svg");
+  display: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width:1085px) {
+  .nav-item {
+    margin: 1rem 0 0 0;
+  }
+}
+
+@media screen and (max-width:885px) {
+  .hamberger-menue {
+    display: block;
+  }
+}
+
+@media screen and (max-width:885px) and (min-width:500px) {
+  .nav-item {
+    display: none;
+  }
+}
+
+@media screen and (max-width:500px) {
+  form {
+    display: none;
+  }
+
+  .menue-search {
+    display: block;
+  }
+
+  .nav-link-ul {
+    position: fixed;
+    z-index: 1;
+    inset: 0 40% 0 0;
+    background-color: hsl(0 0% 52% /0.95);
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 5rem 0 0 6rem ;
+    transition: transform 350ms ease-out;
+    transform: translateX(-100%);
+  }
+
+  .nav-link-ul[data-visible="true"] {
+    transform: translateX(-0%);
+  }
+
+  nav li, nav a {
+    background-color: transparent;
+  }
+
+  .menue-close {
+    position: absolute;
+    display: block;
+    z-index: 99;
+    left: 2.0rem;
+    top: 2.3rem;
+  }
 }
 
 /* index.html blog posts- main section - mobile size */
@@ -140,24 +229,27 @@ h2, .p2 {
 }
 
 /* index.html blog posts- main section - desktop size */
-@media screen and (min-width:820px) {
+@media screen and (min-width:1000px) {
   .first-blog {
     display: flex;
     flex-direction: row;
     justify-content: center;
   }
 
- .first-blog-txt{
-  margin: 0 0 0 5rem;
-  width: 50%;
-}
+  .first-blog-txt {
+    margin: 0 0 0 5rem;
+    width: 50%;
+  }
+
   .blogs {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
+
   .card {
     margin: 2rem 2rem;
   }
+
   .card:after {
     display: none;
   }

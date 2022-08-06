@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" href="image\favicon.png">
   <title>Epictetus</title>
-  
+
   <!-- google fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,13 +20,17 @@
   <nav>
 
     <!--navigation bar-->
+
+    <button type="button" class="hamberger-menue" aria-controls="nav-link-ul" aria-expanded="false"><span class="sr-only"></span></button>
+
     <div class="brand-div">
       <img src="image\favicon.png" class="brandIcon" alt="brand Icon">
       <h1 class="brand-name">Epictetus</h1>
     </div>
 
     <div class="nav-item">
-      <ul id="nav-link-ul" class="nav-link-ul">
+      <ul data-visible="false" id="nav-link-ul" class="nav-link-ul">
+        <button class="menue-close" type="button" ></button>
         <li>
           <a class="nav-link" href="#UI Design">UI Design</a>
         </li>
@@ -45,10 +49,12 @@
       <button type="submit" class="search-icon"></button>
       <input class="search-bar" type="search" placeholder="Search" required>
     </form>
+    <button type="button" class="menue-search"></button>
   </nav>
 
   <!-- blog posts -->
   <main>
+
     <a href="detail-post1.html">
       <div class="first-blog card">
         <img class="card-img" src="image\a.jpg" alt="card-image">
@@ -64,7 +70,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </a>
 
