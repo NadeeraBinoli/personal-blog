@@ -2,7 +2,7 @@
 
  minimal personal blogging website
 
- ![Design preview for the Epictetus personal blog website](<./Blog Design/Detail.png>)
+ ![Design preview for the Epictetus personal blog website](<./Blog Design/Home.png>)
 
 ## Table of contents
 
