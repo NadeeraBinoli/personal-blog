@@ -256,7 +256,7 @@ h2, .p2 {
 }
 
 /* index.html blog posts- main section - desktop size */
-@media screen and (min-width:1000px) {
+@media screen and (min-width:1050px) {
   .first-blog {
     display: flex;
     flex-direction: row;
@@ -264,7 +264,7 @@ h2, .p2 {
   }
 
   .first-blog-txt {
-    margin: 0 0 0 5rem;
+    margin: 0 0 0 1rem;
     width: 50%;
   }
 
@@ -279,6 +279,12 @@ h2, .p2 {
 
   .card:after {
     display: none;
+  }
+}
+
+@media screen and (min-width:1250px) {
+  .first-blog-txt {
+    margin: 0 4rem 0 5rem;
   }
 }
 
@@ -325,4 +331,26 @@ footer {
   justify-content: center;
   text-align: center;
   margin: 0 0 5rem 0;
+}
+
+/* hover effects */
+#home .blogs .card:hover {
+  transform: scale(1.03);
+  transition: all 300ms ease;
+}
+
+#home h2:hover {
+  color: #FEC260;
+}
+
+.nav-link:hover {
+  color: #FEC260;
+  font-size:1.105rem;
+}
+
+@media screen and (max-width:1050px) {
+  #home .first-blog:hover {
+    transform: scale(1.03);
+    transition: all 300ms ease;
+  }
 }
